@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration</title>
+<script>
+	function setServlet(servlet) {
+		document.getElementById('targetServlet').value = servlet;
+	}
+</script>
+</head>
+<body>
+	<form action="mainservlet" method="post">
+		<h3>Student Details</h3>
+		<table>
+			<tr>
+				<td>SNO</td>
+				<td><input type="hidden" id="targetServlet" name="servlet" value=""></td>
+				<td><input type="text" class="mb-2" name="sno" requird></td>
+				<td><button type="button"
+					onclick="setServlet('search'); this.form.submit();">Search</button></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><input type="hidden" id="targetServlet" name="servlet" value=""></td>
+				<td><input type="text" class="mb-2" name="name"></td>
+			</tr>
+			<tr>
+				<td>Fees</td>
+				<td><input type="hidden" id="targetServlet" name="servlet" value=""></td>
+				<td><input type="number" class="mb-2" name="fees"></td>
+			</tr>
+			<tr>
+				<td><button type="button"
+					onclick="setServlet('register'); this.form.submit();">Register</button></td>
+				<td><button type="button"
+					onclick="setServlet('remove'); this.form.submit();">Remove</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
